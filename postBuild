@@ -16,7 +16,7 @@ rm /home/jovyan/v0.2.3.zip
 # Create individual Python environments
 # 1 - machine learning env
 conda create -n machinelearning ipykernel
-conda install -n machinelinearing -c conda-forge tensorflow
+conda install -n machinelearning -c conda-forge tensorflow
 python -m ipykernel install --user --name machinelearning --display-name "machinelearning"
 
 # 2 - emit environment
