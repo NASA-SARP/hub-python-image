@@ -12,3 +12,16 @@ cp custom_jupyter_server_config.json ${NB_PYTHON_PREFIX}/etc/jupyter/jupyter_not
 wget https://github.com/emit-sds/SpectralUnmixing/archive/refs/tags/v0.2.3.zip -P /home/jovyan/
 unzip /home/jovyan/v0.2.3.zip -d /home/jovyan/
 rm /home/jovyan/v0.2.3.zip
+
+# Create individual Python environments
+# 1 - machine learning env
+conda create -n machinelearning ipykernel
+conda instlal -n machinelinearing -c conda-forge tensorflow
+python -m ipykernel install --user --name machinelearning --display-name "machinelearning"
+
+# 2 - emit environment
+conda create -n lpdaac_emit -c conda-forge python=3.10 fiona=1.8.22 gdal hvplot geoviews rioxarray rasterio geopandas earthaccess h5py h5netcdf spectral scikit-image seaborn dask ray-default
+conda install -n lpdaac_emit ipykernel
+git clone --depth 1 --branch v1.3.0 https://github.com/emit-sds/emit-utils.git /home/jovyan/emit-utils
+conda activate lpdaac_emit && pip install -e /home/jovyan/emit-utils/
+python -m ipykernel install --user --name lpdaac_emit --display-name "lpdaac_emit"
