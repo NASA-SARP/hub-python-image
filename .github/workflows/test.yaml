@@ -6,6 +6,7 @@ on:
       - 'apt.txt'
       - 'conda-linux-64.lock'
       - 'environment.yml'
+      - 'Project.toml'
       - 'postBuild'
       - 'start'
       # Trigger rebuilds if the test process changes
