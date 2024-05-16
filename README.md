@@ -4,7 +4,7 @@
 [![Build and push container image](https://github.com/NASA-SARP/hub-python-image/actions/workflows/build.yaml/badge.svg)](https://github.com/NASA-SARP/hub-python-image/actions/workflows/build.yaml)
 
 This JupyterHub docker image is built for the students of the NASA [Student Airborne Research Program (SARP)](https://science.nasa.gov/earth-science/early-career-opportunities/student-airborne-research-program/)
-and is hosted on https://quay.io/repository/nasasarp/hub-python-image. This image stands on the shoulders of the [Cryocloud base image](https://github.com/CryoInTheCloud/hub-image) and benefited greatly from the benefit of all the folks working on it.
+and is hosted on https://quay.io/repository/nasasarp/hub-python-image. This image stands on the shoulders of the [Cryocloud base image](https://github.com/CryoInTheCloud/hub-image) and benefited greatly from all the folks working on it.
 
 The image is built with [repo2docker](https://repo2docker.readthedocs.io), which uses Ubuntu Bionic Beaver (18.04) as the base image. 
 

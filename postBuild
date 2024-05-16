@@ -7,3 +7,8 @@ set -euo pipefail
 # used in the JupyterHub.
 cp custom_jupyter_server_config.json ${NB_PYTHON_PREFIX}/etc/jupyter/jupyter_server_config.d/
 cp custom_jupyter_server_config.json ${NB_PYTHON_PREFIX}/etc/jupyter/jupyter_notebook_config.d/
+
+# Install SpectralUnmixing Julia package
+wget https://github.com/emit-sds/SpectralUnmixing/archive/refs/tags/v0.2.3.zip -P /home/jovyan/
+unzip /home/jovyan/v0.2.3.zip -d /home/jovyan/
+rm /home/jovyan/v0.2.3.zip
