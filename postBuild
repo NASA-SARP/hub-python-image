@@ -15,8 +15,7 @@ rm /home/jovyan/v0.2.3.zip
 
 # Create individual Python environments
 # 1 - machine learning env
-conda create -n machinelearning ipykernel
-CONDA_OVERRIDE_CUDA="11.8" conda install -n machinelearning -c conda-forge tensorflow cudatoolkit
+conda create -n machinelearning ipykernel tensorflow
 python -m ipykernel install --user --name machinelearning --display-name "machinelearning"
 
 # 2 - emit environment
